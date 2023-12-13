@@ -3,6 +3,7 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\CommentResource\Pages;
+use App\Filament\Resources\PostResource\RelationManagers\CommentsRelationManager;
 use App\Models\Comment;
 use App\Models\Post;
 use Filament\Forms\Components\MorphToSelect;
@@ -60,6 +61,8 @@ class CommentResource extends Resource
     {
         return [
             //
+
+            CommentsRelationManager::class,
         ];
     }
 
